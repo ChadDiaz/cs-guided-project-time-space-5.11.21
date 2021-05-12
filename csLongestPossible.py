@@ -19,7 +19,26 @@ Understand:
 ---> "aedf"
 
 Plan:
-initialize an empty string output = ""
+initialize an empty list    output = []
+
 """
 
 def csLongestPossible(str_1, str_2):
+    """
+    str_1 = a d b b b e f f 
+    newString1 = a d b e f
+
+    str_2 = i i u y t r e e
+    newString2 = i u y t r e
+    """
+    uniString1 = set(str_1)
+    uniString2 = set(str_2)
+    uniString1.update(uniString2)
+    
+
+    finalString = list(uniString1)
+    finalString.sort()
+
+    return "".join(finalString)
+
+    
